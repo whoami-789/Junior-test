@@ -16,6 +16,6 @@ public record TaskResponse(
         UserResponse creator,
         UserResponse assignee,
         Instant createdAt,
-        Instant updateAt
+        Instant updatedAt
 ) {
 }
