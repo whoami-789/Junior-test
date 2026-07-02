@@ -2,6 +2,7 @@ package com.jsr.tasktrackerapi.domain.entity;
 
 import com.jsr.tasktrackerapi.domain.enums.Role;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
