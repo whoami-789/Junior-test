@@ -56,6 +56,14 @@ public class GlobalExceptionHandler {
         return build(HttpStatus.UNAUTHORIZED, "Неверный адрес электронной почты или пароль", request);
     }
 
+    @ExceptionHandler(BusinessRuleException.class)
+    public ResponseEntity<ApiError> handleBusinessRule(
+            BusinessRuleException ex,
+            HttpServletRequest request
+    ) {
+        return build(HttpStatus.BAD_REQUEST, ex.getMessage(), request);
+    }
+
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ApiError> handleNotFound(
             ResourceNotFoundException ex,
